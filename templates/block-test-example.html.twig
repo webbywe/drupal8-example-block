@@ -1,0 +1,14 @@
+<div class="example-test-block">
+  {% if title is not empty %}
+    <h2>{{ title }}</h2>
+  {% endif %}
+  <div class="list-group">
+    {% if content is empty %}
+      <div class="list-group-item">{{ no_results_message }}</div>
+    {% else %}
+      {%- for key, node in content -%}
+      <a href="{{ url('entity.node.canonical', {'node': node.id}) }}" class="list-group-item list-group-item-action">{{ node.label }}</a>
+      {%- endfor -%}
+    {% endif %}
+  </div>
+</div>
