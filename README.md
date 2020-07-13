@@ -2,6 +2,10 @@
 
 This is an example of a custom Drupal 8 block with functional unit test for demonstration purposes.
 
+Feel free to comment or provide insight of better ways to code but intent of this project
+was to practice on Drupal 8 techniques along with providing example code for the Druapl 8 community
+that would find it a useful reference.
+
 ## Drupal 8 custom block and code techniques Used
 
 ### Block configuration
@@ -41,4 +45,7 @@ a particular set of parameters.
 Drupal 8 functional unit tests are added for testing of the
 custom block functionality. The test utilizes the BlockTestBase.php
 funtional unit test Drupal 8 core class for initial base setup.
+
+The functional tests make use of [Drupal 10 asserts](https://api.drupal.org/api/drupal/core%21modules%21block%21tests%21src%21Functional%21BlockTest.php/class/BlockTest/8.9.x)
+and avoid any that have been deprecated.
 
