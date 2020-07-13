@@ -121,7 +121,7 @@ class ExampleBlockTest extends BlockTestBase {
         'publish' => TRUE,
       ],
       [
-        'title' => 'Page - tomorrow 1',
+        'title' => 'Page - tomorrow',
         'time' => strtotime('-1 day', $today),
         'publish' => TRUE,
       ],
@@ -222,7 +222,7 @@ class ExampleBlockTest extends BlockTestBase {
 
     // Assure the other pages are not present.
     $this->assertSession()->pageTextNotContains('Page - yesterday');
-    $this->assertSession()->pageTextNotContains('Page - tomorrow 1');
+    $this->assertSession()->pageTextNotContains('Page - tomorrow');
     $this->assertSession()->pageTextNotContains('Page - today unpublished');
 
     // Edit the range to only have 3.
@@ -234,6 +234,10 @@ class ExampleBlockTest extends BlockTestBase {
     // Assure block out of range don't show.
     $this->drupalGet('<front>');
     $this->assertSession()->pageTextNotContains('Page - today 4');
+
+    // Assure the titles are clickable.
+    $this->clickLink('Page - today 1');
+    $this->assertSession()->titleEquals('Page - today 1 | Drupal');
   }
 
 }
