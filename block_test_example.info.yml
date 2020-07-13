@@ -1,0 +1,5 @@
+name: 'Block Test Example'
+type: module
+description: 'An example of a custom block with a unit test that works with Bootstrap 4 based themes.'
+core: 8.x
+package: 'Example'

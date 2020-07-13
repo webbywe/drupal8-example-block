@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains block_test_example.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function block_test_example_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the block_test_example module.
+    case 'help.page.block_test_example':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('An example of a custom block with a funtional unit test that works with Bootstrap 4 based themes.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function block_test_example_theme() {
+  return [
+    'block_test_example' => [
+      'variables' => [
+        'title' => NULL,
+        'no_results_message' => NULL,
+        'content' => NULL,
+      ],
+    ],
+  ];
+}
