@@ -1,8 +1,8 @@
-# Example Drupal 8 custom block with unit test
+# Example Drupal 8 custom block with functional unit test
 
-This is an example of a Drupal 8 block with functional unit test for demonstration purposes.
+This is an example of a custom Drupal 8 block with functional unit test for demonstration purposes.
 
-## Techniques Used
+## Drupal 8 custom block and code techniques Used
 
 ### Block configuration
 
@@ -15,21 +15,24 @@ output in the template.
 ### Block Lazy Loading
 
 The block lazy loads content.
-After the page loads the block, an ajax request is made
+After the page loads the block, a Drupal 8 ajax request is made
 to load additional data.
 
-This allows the block itself to be cached but the content
+This allows the custom block itself to be cached but the content
 to continue to load fresh data allow the block content
 to be updated while the page continues to be cached.
 
 ### Theme templates
 
-The Block outputs a twig template with data provided based
-on data built from the query.
+The custom block outputs HTML based on a render array with data
+that is processed in the custom block twig template.
+
+The twig template is identified in the `hook_theme()` function in the
+`.module` file.
 
 ### Entity Query
 
-The Block class utilizes the Entity Query to both limit
+The Block class utilizes the Drupal 8 Entity Query to both limit
 the range of the nodes but query nodes that match
 a particular set of parameters.
 
