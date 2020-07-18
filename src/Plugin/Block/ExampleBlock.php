@@ -22,6 +22,8 @@ class ExampleBlock extends BlockBase implements ContainerFactoryPluginInterface 
   use StringTranslationTrait;
 
   /**
+   * Default configuration.
+   *
    * {@inheritdoc}
    */
   public function defaultConfiguration() {
@@ -34,6 +36,8 @@ class ExampleBlock extends BlockBase implements ContainerFactoryPluginInterface 
   }
 
   /**
+   * Configuration form.
+   *
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
@@ -80,6 +84,11 @@ class ExampleBlock extends BlockBase implements ContainerFactoryPluginInterface 
     return $form;
   }
 
+  /**
+   * Block validation.
+   *
+   * @inheritDoc
+   */
   public function blockValidate($form, FormStateInterface $form_state) {
     parent::blockValidate($form, $form_state);
 
@@ -90,6 +99,8 @@ class ExampleBlock extends BlockBase implements ContainerFactoryPluginInterface 
   }
 
   /**
+   * Block submit.
+   *
    * {@inheritdoc}
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
@@ -142,6 +153,8 @@ class ExampleBlock extends BlockBase implements ContainerFactoryPluginInterface 
   }
 
   /**
+   * Callback for lazy loading content into the block.
+   *
    * @param string $title
    *   The title of the block container.
    * @param string $no_results
