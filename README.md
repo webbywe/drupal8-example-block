@@ -1,10 +1,10 @@
 # Example Drupal 8 custom block with functional unit test
 
-This is an example of a custom Drupal 8 block with functional unit test for demonstration purposes.
+This is an example of a Drupal 8 custom block with functional unit test for demonstration purposes.
 
-Feel free to comment or provide insight of better ways to code but intent of this project
-was to practice on Drupal 8 techniques along with providing example code for the Druapl 8 community
-that would find it a useful reference.
+Feel free to comment or provide insight of code critiques but intent of this project
+was to practice on Drupal 8 techniques along with providing example code for the Drupal 8 community
+for those that would find it a useful reference.
 
 ## Drupal 8 custom block and code techniques Used
 
